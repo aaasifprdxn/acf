@@ -1,0 +1,590 @@
+/*
+Theme Name: Task Theme
+Theme URI: http://wordpress.org/themes/tasktheme
+Author: Aasif Ansari
+Author URI: http://wordpress.org/
+Description: Custome Wordpress Theme
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, right-sidebar, flexible-width, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
+Text Domain: tasktheme
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+@charset "utf-8";
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* Force scrollbar */
+html { overflow-y: scroll; }
+
+/* Align radios and text inputs with their label */
+
+input[type='radio'] { vertical-align: text-bottom; }
+
+/* Hand cursor on clickable input elements */
+label,
+input[type='button'],
+input[type='submit'],
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em { font-style: italic; }
+
+img {
+  width: 100%;
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup { top: -.7em; }
+sub { bottom: -.25em; }
+
+/* 1.2. Clear Fix
+   ========================== */
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after { clear: both; }
+.cf { *zoom: 1; }
+
+/*for all*/
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+a { 
+  display: inline-block;
+  text-decoration: none; 
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+/*for wrapper*/
+.wrapper {
+  max-width: 1360px;
+  width: 86%; 
+  margin: 0 auto;
+}
+/*=================================
+  Header styling starts here  
+=================================*/
+
+ul{
+	background-color: #676b6a;
+	font-size: 17px;
+	text-align: center;
+	list-style-type: none;
+}
+
+ul li a { 
+	color: #f0f8ff; 
+	padding: 10px;
+} 
+  
+ul li a:hover { 
+	background-color: #b8c233;
+	color: #000;
+} 
+
+li.current-menu-item a{ 
+	background-color:#b8c233;
+	color: #000000;
+	margin-right: -4px;
+	margin-left: -4px;
+}
+
+/*website logo*/
+.website-logo {
+	text-align: -webkit-center;
+	background-color: #dcd9d9;
+}
+
+.website-logo figure {
+	width: 7%;
+}
+
+.website-logo-footer {
+	width: 64px;
+	padding: 5px;
+	position: absolute;
+}
+/*=================================
+  Header styling ends here
+=================================*/  
+
+/*=================================
+  main styling starts here
+=================================*/
+
+.banner-description {
+	padding-top: 10px;
+	padding-bottom: 5px;
+}
+
+.blog-post-styling {
+	width: 32%;
+	background-color: #fff;
+	margin-top: 36px;
+	margin-left: 11px;
+	text-align: right;
+	box-shadow: 1px 3px 17px #aba6a6;
+	font-weight: 600;
+}
+.post-title-sport {	text-align: left; }
+
+select{ 
+	width: 10%;
+	text-transform: capitalize;
+}
+
+form.js-form-filter {
+	text-align: center;
+	padding-top: 10px;
+}
+
+.blog-post-styling a {
+	text-align: left;
+	padding-left: 20px;
+	padding-right: 15px;
+	padding-top: 9px;
+	color: #000;;
+}
+.mobile-page-image {
+	width: 35%;
+	padding: 10px 387px;
+}
+/*blog post styling*/
+.mobile-content-display {
+	padding-top: 74px;
+	font-size: larger;
+}
+.mobile-title {
+	font-size: xx-large;
+	color: #000;
+	text-align: center;
+}
+
+.mobile-details {
+	padding-top: 15px;
+  text-transform: capitalize;
+}
+
+.entry-date {
+	font-size: 14px;
+	color: grey;
+	padding-right: 108px;
+	padding-top: 10px;
+}
+
+.entry-date p {
+	font-size: 14px;
+	color: grey;
+	padding-bottom: 16px;
+}
+
+.publish-date {
+	font-size: 14px;
+	color: grey;
+	float: left;
+	padding-left: 20px;
+	padding-top: 10px;
+}
+
+.mobile-blog-container {
+	display: flex;
+	flex-wrap: wrap;
+	padding-bottom: 15px;
+}
+
+.detail-post-date-category {
+	font-size: 14px;
+	color: grey;
+	padding-left: 22px;
+	text-align: center;
+}
+
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.new-page-text {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.new-page-image {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+/*single mobile post type page table*/
+table {
+	padding-left: 240px;
+	padding-right: 216px;
+	padding-top: 50px;
+	text-transform: capitalize;
+	width: 100%;
+	padding-bottom: 20px;
+}
+
+tbody {	box-shadow: 1px 3px 17px #aba6a6; }
+
+tr:nth-child(even){ background-color: #f2f2f2; }
+
+.full-height { height: 100%; }
+
+.container-side-bar {
+	width: 26%;
+	float: right;
+	text-align: center;
+	border: 1px solid;
+	margin-top: 43px;
+	text-transform: capitalize;
+	box-shadow: 4px 9px 20px #aba6a6;
+}
+
+.container-side-bar a {
+	color: #000000;
+  font-size: x-large;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.side-bar-heading {
+	background-color: #d47979;
+  color: #ffffff;
+  font-size: xx-large;
+  text-transform: uppercase;
+}
+
+.container-left-side {
+	width: 68%;
+	padding-top: 50px;
+}
+
+.title-left-side {
+	text-align: center;
+	font-size: xx-large;
+	font-weight: 800;
+	color: #000000;
+	padding-bottom: 31px;
+}
+
+.custom-field-text {
+	width: 50%;
+	padding-top: 20px;
+	padding-bottom: 12px;
+	box-shadow: 0 0 2px #aba6a6;
+	margin-bottom: 7px;
+}
+
+/*Mobile section styling in home template*/
+
+.mobile-section-template-home {
+	border: 1px solid #f1f1f1;
+	background-color: #f1f1f1;
+}
+.mobile-title-template-home {
+	font-size: 29px;
+	text-transform: capitalize;
+	color: #00008b;
+	background-color: #ffd700;
+	padding: 13px;
+}
+
+/*world new section styling in home template*/
+.world-news-section-home-template {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+/*about us address section*/
+.goal-section-about-us {	
+	padding-top: 15px; 
+	padding-bottom: 10px;
+	background-color: #f8f8ff;
+}
+
+.achievement-section-about-us {
+	padding-top: 15px; 
+	padding-bottom: 10px;
+}
+.goal-section-about-us h2 {
+	font-size: 42px;
+	text-transform: capitalize;
+	color: #de2020;
+	font-weight: 700;
+	padding-bottom: 11px; 
+}
+
+.achievement-section-about-us h2 {
+	font-size: 42px;
+	text-transform: capitalize;
+	color: #de2020;
+	font-weight: 700;
+	padding-bottom: 11px; 
+}
+
+.goal-section-about-us figure {
+	width: 40%;
+  border-radius: 38px;
+}
+
+.achievement-section-about-us figure {
+	width: 40%;
+  border-radius: 38px;
+}
+.goal-text-field {
+	width: 56%;
+	padding-top: 40px;
+	padding-left: 34px;
+	padding-right: 5px;
+}
+
+.achievement-text-field {
+	width: 56%;
+	padding-top: 40px;
+	padding-left: 34px;
+	padding-right: 5px;
+}
+.goal-image-text {
+	display: flex;
+}
+
+.achievement-image-text {
+	display: flex;
+}
+
+
+/*about us flexible*/
+
+.banner-description-about-us {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.banner-image-about-us {	
+	width: 100%;	
+	padding-bottom: 5px;
+}
+
+.page-image-about-us {	
+	width: 100%;	
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.add-text-about-us {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.add-title-about-us {
+	font-size: 42px;
+	color: #de2020;
+	font-weight: 700;
+	padding-bottom: 11px; 
+}
+
+.image-text-about-us {
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display: flex;
+}
+
+.single-image-about-us {
+	width: 45%;
+	padding-right: 20px;
+}
+
+.single-text-about-us {
+	width: 50%;
+	padding-top: 20px;
+	text-align: center;
+}
+
+/*=================================
+  main styling ends here
+=================================*/
+
+/*=================================
+  footer styling starts here
+=================================*/ 
+
+
+.footer-copyright-text {
+	background-color: #8a8a8a;
+  padding-top: 20px;
+  padding-bottom: 20px;
+	padding-right: 20px;
+	text-align: right;
+}
+
+.footer-logo-text {
+	position: relative;
+}
+
+.icon::before {
+	display: inline-block;
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+}
+
+.txt {
+	text-indent: -9999px;    
+}
+.icon-social-link {
+	background-color: grey;
+	text-align: center;
+	width: 50%;
+	background-color: #676b6a;
+}
+.icon-social-link a{ color: black; }
+
+.icon-social-link a:visited{ color: black; }
+
+.facebook::before {
+	font-family: 'Font Awesome 5 Brands';
+	content: "\f082";
+	padding-right: 4px;
+	font-weight: 900;
+	font-size: 45px;
+	padding-right: 20px;
+}
+
+.instagram::before { 
+	font-family: 'Font Awesome 5 Brands';
+	content: "\f16d"; 
+	padding-right: 4px;
+	font-weight: 900;
+	font-size: 45px;
+	padding-right: 20px;
+}
+
+.twitter::before { 
+	font-family: 'Font Awesome 5 Brands';
+	content: "\f081";
+	padding-right: 4px;
+	font-size: 45px;
+	padding-right: 20px;
+}
+
+.footer-menu {
+	display: flex;
+}
+
+.footer-nav-menu {
+	width: 50%;
+}
+.footer-nav-menu h2{
+	color: #ffd700;
+	width: 100%;
+	background-color: #676b6a;
+	text-transform: capitalize;
+	padding-left: 63%;
+	padding-top: 36px;
+	font-size: 25px;
+}
+
+.footer-menu h3{
+	font-size: 26px;
+    padding-top: 37px;
+    padding-right: 215px;
+    text-transform: capitalize;
+    color: #ffd700;
+}
+
+.footer-menu li {
+	display: block;
+}
+
+
+.footer-menu li.current-menu-item a{
+	color: white;
+	background-color: #676b6a;
+}
+
+.footer-menu a:hover {
+	background-color: #676b6a;
+	color: white;
+}
+
+.footer-menu ul {
+	display: block;
+	/* text-align: right; */
+	padding-left: 276px;
+	padding-top: 15px;
+	padding-bottom: 30px;
+}
+
+.social-link {
+	padding-right: 179px;
+    padding-top: 37px;
+}
+ /*=================================
+  footer styling ends here
+=================================*/ 
+
+/*media query starts*/
+/*media query for 995px starts here*/
+@media only screen and (max-width: 995px) {
+
+
+
+}  

@@ -1,0 +1,39 @@
+<?php
+/*
+Template Name: Page all category
+*/
+
+
+
+get_header();
+
+
+$wcatTerms = get_terms('news_cat', array('hide_empty' => 0, 'parent' =>0)); 
+   foreach($wcatTerms as $wcatTerm) : 
+   ?>
+<ul>
+   <li>
+      <a href="<?php echo get_term_link( $wcatTerm->slug, $wcatTerm->taxonomy ); ?>"><?php echo $wcatTerm->name; ?></a>
+      <ul class="megaSubCat">
+         <?php
+            $wsubargs = array(
+               'hierarchical' => 1,
+               'show_option_none' => '',
+               'hide_empty' => 0,
+               'parent' => $wcatTerm->term_id,
+               'taxonomy' => 'news_cat'
+            );
+            $wsubcats = get_categories($wsubargs);
+            foreach ($wsubcats as $wsc):
+            ?>
+         <li><a href="<?php echo get_term_link( $wsc->slug, $wsc->taxonomy );?>"><?php echo $wsc->name;?></a></li>
+         <?php
+            endforeach;
+            ?>  
+      </ul>
+   </li>
+</ul>
+<?php 
+   endforeach; 
+get_sidebar();
+get_footer();
